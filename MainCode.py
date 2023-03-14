@@ -1,6 +1,6 @@
 # Code used to program Smart Lights, as well as to see if lights are on or off.
 
-print("Please use Military Time Format (e.g. HH.MM)") # To explain Time Format.
+print("Please use Military Time Format (e.g. HH.MM, HH = 01-24, MM = 01-59)") # To explain Time Format.
 When_on = float(input("When Should Lights Turn On?: ")) # To get users desired time to turn lights on.
 
 When_off = float(input("When Should Lights Turn Off?: ")) # To get users desired time to turn lights off.
@@ -15,7 +15,7 @@ Question = input("Check if Lights are ON?: ") # To get users input.
 if Question in ["No","no","NO", "nO", "n0", "N0"]: # Different ways the input No could be typed.
   print("Thank you!") 
 else:
-  print("Please use Military Time Format (e.g. HH.MM)")
+  print("Please use Military Time Format (e.g. HH.MM, HH = 01-24, MM = 01-59)")
   Wht_time = float(input("What Time is it?: "))# To get users current time.
   if Wht_time < 00.01 or Wht_time > 24.00:
     exit() # Added to avoid an invalid Time.
@@ -23,5 +23,3 @@ else:
     print("Lights are ON!") # Tell user their Lights are ON.
   else:
      print("Lights are OFF!") # Tell user their Lights are OFF.
-
-
