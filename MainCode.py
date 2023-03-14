@@ -4,8 +4,10 @@ print("Please use Military Time Format (e.g. HH.MM)") # To explain Time Format.
 When_on = float(input("When Should Lights Turn On?: ")) # To get users desired time to turn lights on.
 
 When_off = float(input("When Should Lights Turn Off?: ")) # To get users desired time to turn lights off.
-
-print("Light Schedule:", When_on, "TO", When_off) # To show/confirm users Time Schedule.
+if When_off < 00.01 or When_off > 24.00 or When_on < 00.01 or When_on > 24.00:
+  exit() # Added to avoid an invalid Time.
+else:
+  print("Light Schedule:", When_on, "TO", When_off) # To show/confirm users Time Schedule.
 
 print("Please type Yes or No") # To explain what input is needed for output.
 Question = input("Check if Lights are ON?: ") # To get users input.
@@ -14,8 +16,12 @@ if Question in ["No","no","NO", "nO", "n0", "N0"]: # Different ways the input No
   print("Thank you!") 
 else:
   print("Please use Military Time Format (e.g. HH.MM)")
-  Wht_time = float(input("What Time is it?: ")) # To get users current time.
+  Wht_time = float(input("What Time is it?: "))# To get users current time.
+  if Wht_time < 00.01 or Wht_time > 24.00:
+    exit() # Added to avoid an invalid Time.
   if Wht_time > When_on and Wht_time < When_off: # Users time needs to be greater than the scheduled start time but less than their scheduled end time.
     print("Lights are ON!") # Tell user their Lights are ON.
   else:
      print("Lights are OFF!") # Tell user their Lights are OFF.
+
+
