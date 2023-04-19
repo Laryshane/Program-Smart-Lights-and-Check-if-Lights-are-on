@@ -1,5 +1,5 @@
 # Program-Smart-Lights-and-Check-if-Lights-are-on
-Do you have Smart Lights that you need to program when to turn on or off and what to make sure hat they are in fact on or off?
+Do you have Smart Lights that you need to program when to turn on or off and what to make sure that they are in fact on or off?
 
 This application is used to set a Program for Smart Lights and if check if the Smart Lights are currently on or off.
 
